@@ -5,7 +5,6 @@ import {MDXComponents} from 'mdx/types.js'
 import './index.css'
 import App from './App.tsx'
 import MdxTest from "./MdxTest.mdx";
-import {MDXProvider} from "@mdx-js/react";
 
 const components: MDXComponents = {
     em(properties) {
@@ -19,9 +18,7 @@ createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route index element={<App/>}/>
                 <Route path="mdx-test" element={
-                    <MDXProvider components={components}>
-                        <MdxTest/>
-                    </MDXProvider>
+                    <MdxTest components={components} />
                 }/>
             </Routes>
         </BrowserRouter>
