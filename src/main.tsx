@@ -1,16 +1,28 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import {BrowserRouter, Route, Routes} from 'react-router'
+import {MDXComponents} from 'mdx/types.js'
 import './index.css'
 import App from './App.tsx'
-import MdxTest from "@/MdxTest.tsx";
+import MdxTest from "./MdxTest.mdx";
+import {MDXProvider} from "@mdx-js/react";
+
+const components: MDXComponents = {
+    em(properties) {
+        return <i {...properties} />
+    }
+}
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <BrowserRouter>
             <Routes>
                 <Route index element={<App/>}/>
-                <Route path="mdx-test" element={<MdxTest/>}/>
+                <Route path="mdx-test" element={
+                    <MDXProvider components={components}>
+                        <MdxTest/>
+                    </MDXProvider>
+                }/>
             </Routes>
         </BrowserRouter>
     </StrictMode>
