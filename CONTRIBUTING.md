@@ -31,7 +31,7 @@ If you have any question, don't hesitate to ask in the on Discord or in the issu
 
 ### Contribute to the main branch
 
-Once you've completed your work, you can create a pull request (PR) for your changes. A project maintainer will review the PR, provide feedback for further improvements, and merge it into the main branch once it's ready.
+Once you've completed your work, you can create a pull request (PR) for your changes. Ideally, a PR should have a descriptive title and detailed description. A project maintainer will review the PR, provide feedback for further improvements, and merge it into the main branch once it's ready.
 
 If you need some help while working on the code, you can also create a draft PR. This allows you to get feedback on your work in progress and make any necessary changes before submitting the final version.
 
