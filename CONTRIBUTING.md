@@ -37,6 +37,10 @@ If you need some help while working on the code, you can also create a draft PR.
 
 *If you are a member of the Vanier FLOSS Club organization*, you do have the permission to directly merge your branch into the main branch (or directly merge your own PR). However, it is always recommended to let your code go through a review process.
 
+### Create Issues
+
+If you find any bugs or have suggestions for new features, please create an issue in the repository. Make sure to provide a clear and concise description of the problem or suggestion, along with any relevant details or screenshots.
+
 ## Use of External Codes
 
 ### Use of External Libraries and/or Frameworks and/or Open Source Codes
