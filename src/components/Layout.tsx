@@ -45,7 +45,7 @@ export function Layout({ children }: LayoutProps) {
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-6 text-center text-muted-foreground">
-            <p>© {new Date().getFullYear()} Vanier FLOSS Club. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Vanier FLOSS Club.</p>
           </div>
         </div>
       </footer>
