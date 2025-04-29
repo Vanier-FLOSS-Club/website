@@ -3,30 +3,30 @@
 export const themeConfig = {
   // Site Metadata | 站点数据
   siteMeta: {
-    title: "VitePress Theme Arch",
-    description: "Hello World",
+    title: "Vanier FLOSS Club",
+    description: "The Free/Libre and Open Source Software Club of Vanier College at Montreal, Quebec, Canada.",
     // The Welcome Message to be Shown on the Home Page
     // Optional, if not provided, a welcome + title message will be used.
-    // welcomeMessage: "Welcome to my site.",
+    welcomeMessage: "Welcome to Vanier FLOSS Club!",
     logo: "/images/logo/logo.webp",
     // URL | 站点地址
-    site: "https://example.tld",
+    site: "https://vanierfloss.club",
     // Language: 'en-US' | 'zh-CN'
     // 语言: 'en-US' | 'zh-CN'
     lang: "en-US",
     // Author Information | 作者信息
     author: {
-      name: "Admin",
+      name: "Vanier FLOSS Club",
       cover: "/images/logo/logo.webp",
-      email: "admin@example.tld",
-      link: "https://example.tld",
+      email: "vanierfloss@protonmail.com",
+      link: "https://vanierfloss.club",
     },
   },
   // Internet Content Provider License / 备案信息
   // icp: "萌ICP备19700101号",
   // Website Established Since (A Full Unix Timestamp)
   // 建站时间（完整的 Unix 时间戳）
-  since: "1970-01-01T00:00:00.000Z",
+  since: "2025-05-01T00:00:00.000Z",
   // Number of Posts to Show per Page
   postSize: 8,
   // Inject
@@ -43,7 +43,7 @@ export const themeConfig = {
           rel: "alternate",
           type: "application/rss+xml",
           title: "RSS",
-          href: "https://example.tld/rss.xml",
+          href: "https://vanierfloss.club/rss.xml",
         },
       ],
       // FontAwesome
@@ -97,7 +97,7 @@ export const themeConfig = {
         {
           icon: "/images/logo/logo.webp",
           name: "GitHub",
-          url: "https://github.com/Octocat",
+          url: "https://github.com/Vanier-FLOSS-Club",
         },
       ],
     },
@@ -128,27 +128,19 @@ export const themeConfig = {
       {
         // If using FA Pro, use fa-envelopes.
         icon: "fa-solid fa-envelope",
-        link: "mailto:admin@example.tld",
+        link: "mailto:vanierfloss@protonmail.com",
       },
       {
         icon: "fa-brands fa-github",
-        link: "https://www.github.com/",
+        link: "https://www.github.com/Vanier-FLOSS-Club",
       },
       {
         icon: "fa-brands fa-linkedin",
-        link: "https://www.linkedin.com/in/",
-      },
-      {
-        icon: "fa-brands fa-x-twitter",
-        link: "https://x.com/",
-      },
-      {
-        icon: "fa-brands fa-bluesky",
-        link: "https://bsky.app/profile/",
+        link: "https://www.linkedin.com/company/vanier-floss-club/",
       },
       {
         icon: "fa-brands fa-discord",
-        link: "https://discord.gg/",
+        link: "https://discord.gg/rBKb9JRQGD",
       },
     ],
     // Sitemap | 网站地图
@@ -197,7 +189,7 @@ export const themeConfig = {
     // Brief Description of the Site | 站点简介
     hello: {
       enable: true,
-      text: "This is a simple <strong>VitePress</strong> theme.",
+      text: "Hello! We are the Free/Libre and Open Source Software Club of Vanier College at Montreal, Quebec, Canada.",
     },
     // Table of Contents | 文章目录
     toc: {

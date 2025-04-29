@@ -11,13 +11,13 @@
     <div class="info">
       <div class="name">
         <span class="author">{{ theme.siteMeta.author.name }}</span>
-        <span class="desc">{{ theme.siteMeta.description }}</span>
+        <!--<span class="desc">{{ theme.siteMeta.description }}</span>-->
       </div>
       <div class="link">
-        <a href="https://github.com/" target="_blank" class="social-link">
+        <a href="https://github.com/Vanier-FLOSS-Club" target="_blank" class="social-link">
           <i class="font-awesome fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/" target="_blank" class="social-link">
+        <a href="https://www.linkedin.com/company/vanier-floss-club/" target="_blank" class="social-link">
           <i class="font-awesome fa-brands fa-linkedin"></i>
         </a>
       </div>
