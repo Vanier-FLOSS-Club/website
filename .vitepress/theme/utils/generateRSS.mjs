@@ -26,8 +26,8 @@ export const createRssFile = async (config, themeConfig) => {
   });
   // Load Posts
   let posts = await createContentLoader(
-    ["posts/**/*.md", "!**/README.md"], {
-    render: true,
+    ["posts/**/*.md"],{
+      render: true,
   }).load();
   // Sort Posts
   posts = posts.sort((a, b) => {
@@ -36,6 +36,8 @@ export const createRssFile = async (config, themeConfig) => {
     return dateB - dateA;
   });
   for (const { url, frontmatter } of posts) {
+    // Skip if it is README
+    if (url.endsWith("README")) continue;
     // Only keep the latest 10 posts.
     if (feed.items.length >= 10) break;
     // Post Data
