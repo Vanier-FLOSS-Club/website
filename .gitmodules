@@ -1,6 +1,3 @@
 [submodule "posts"]
 	path = posts
 	url = https://github.com/Vanier-FLOSS-Club/contents.git
-[submodule "public/static"]
-	path = public/static
-	url = https://github.com/Vanier-FLOSS-Club/static
