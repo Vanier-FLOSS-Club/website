@@ -43,7 +43,7 @@ export const themeConfig = {
           rel: "alternate",
           type: "application/rss+xml",
           title: "RSS",
-          href: "https://vanierfloss.club/rss.xml",
+          href: "https://www.vanierfloss.club/rss.xml",
         },
       ],
       // FontAwesome
