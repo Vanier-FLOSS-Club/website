@@ -14,7 +14,7 @@ const getPostMDFilePaths = async () => {
       ignore: ["node_modules", "pages", ".vitepress", "README.md"],
     });
     // Filter the paths to only include those in the `posts/` directory.
-    return paths.filter((item) => item.includes("posts/"));
+    return paths.filter((item) => item.includes("posts/") && !item.includes("README.md"));
   } catch (error) {
     console.error("Error getting post paths: ", error);
     throw error;

@@ -25,7 +25,8 @@ export const createRssFile = async (config, themeConfig) => {
     updated: new Date(),
   });
   // Load Posts
-  let posts = await createContentLoader("posts/**/*.md", {
+  let posts = await createContentLoader(
+    ["posts/**/*.md", "!**/README.md"], {
     render: true,
   }).load();
   // Sort Posts
