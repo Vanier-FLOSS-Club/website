@@ -71,22 +71,8 @@ export const themeConfig = {
   },
   // Navigation Bar Configuration | 导航栏配置
   nav: [
-    {
-      text: "Posts",
-      items: [
-        { text: "Archives", link: "/pages/archives", icon: "fa-solid fa-newspaper" },
-        { text: "All Categories", link: "/pages/categories", icon: "fa-solid fa-folder-open" },
-        { text: "All Tags", link: "/pages/tags", icon: "fa-solid fa-hashtag" },
-      ],
-    },
-    {
-      text: "Page Group",
-      items: [
-        { text: "Page 1", link: "/pages/demo-page-1", icon: "fa-solid fa-lightbulb" },
-        { text: "Page 2", link: "/pages/demo-page-1", icon: "fa-solid fa-code-branch" },
-      ],
-    },
-    { text: "About", link: "/pages/about", icon: "fa-solid fa-address-card" },
+    { text: "Events", link: "/pages/categories/Events", icon: "fa-solid fa-calendar-day" },
+    { text: "About Us", link: "/pages/about", icon: "fa-solid fa-address-card" },
   ],
   // Left Side Nav Menu (External Links)
   // 左侧导航栏菜单（外部链接）
@@ -146,7 +132,13 @@ export const themeConfig = {
     // Sitemap | 网站地图
     sitemap: [
       {
-        text: "Blog",
+        text: "Contents",
+        items: [
+          { text: "Events", link: "/pages/categories/Events" },
+        ],
+      },
+      {
+        text: "Posts",
         items: [
           { text: "Recent Posts", link: "/" },
           { text: "All Categories", link: "/pages/categories" },
