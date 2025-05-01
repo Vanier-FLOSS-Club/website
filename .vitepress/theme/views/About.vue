@@ -1,13 +1,15 @@
 <template>
   <div class="about">
     <h1 class="title">About Us</h1>
-    <div class="about-content" style="grid-template-columns: 1fr 3fr 1fr">
+    <div class="about-content" style="grid-template-columns: 0fr 3fr 0fr">
       <div/>
       <!-- 介绍 -->
       <div class="about-item hello">
         <span class="text1">👋</span>
-        <span class="text2 title2">Hello World!</span>
-        <span class="text3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</span>
+        <span class="text2 title2">Welcome!</span>
+        <span class="text3">
+          We are the Vanier community gets together to celebrate and contribute to Free and Open Source Software projects.
+        </span>
       </div>
       <div/>
     </div>
