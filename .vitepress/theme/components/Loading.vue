@@ -2,7 +2,7 @@
   <Teleport to="body">
     <Transition name="fade" mode="out-in">
       <div v-if="loadingStatus" class="loading" @click="loadingStatus = false">
-        <img :src="theme.siteMeta.logo" class="logo" alt="loading-logo" />
+        <img :src="theme.siteMeta.logo" class="logo" alt="loading-logo" style="border-radius: 15px; overflow: hidden"/>
         <span :class="['tip', { show: showTip }]">{{ i18n('components.loading.hint') }}</span>
       </div>
     </Transition>
