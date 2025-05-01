@@ -16,7 +16,7 @@
       >
         <i :class="`font-awesome ${item.icon}`"></i>
       </a>
-      <div class="logo" :title="i18n('components.footer-link.go-back-to-top')" @click="smoothScrolling">
+      <div style="border-radius: 250px; overflow: hidden;" class="logo" :title="i18n('components.footer-link.go-back-to-top')" @click="smoothScrolling">
         <img :src="siteMeta.author.cover" alt="author" class="author" />
       </div>
       <a
