@@ -24,16 +24,6 @@
             :href="type?.type !== 'loss' ? link.url : null"
             target="_blank"
           >
-            <div class="cover">
-              <LazyLoader :useFriendsLink="link.avatar || link.ico">
-                <img
-                  :src="link.avatar || link.ico"
-                  :class="['cover-img', { 'cf-friends-avatar': useFriendsLink }]"
-                  :alt="link?.name || 'cover'"
-                  @load="(e) => e.target.classList.add('loaded')"
-                />
-              </LazyLoader>
-            </div>
             <div class="data">
               <span :class="['name', { 'cf-friends-name': useFriendsLink }]">{{ link.name }}</span>
               <span class="desc">{{ link.desc }}</span>
@@ -88,14 +78,14 @@ const props = defineProps({
     .all-link {
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       .link-card {
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 90px;
+        height: 250px;
         width: 100%;
-        padding: 12px;
+        padding: 20px;
         &.loss {
           pointer-events: none;
         }
@@ -110,10 +100,10 @@ const props = defineProps({
           border-radius: 50%;
           overflow: hidden;
           background: linear-gradient(
-            90deg,
-            var(--main-card-border) 25%,
-            var(--main-card-background) 37%,
-            var(--main-card-border) 63%
+              90deg,
+              var(--main-card-border) 25%,
+              var(--main-card-background) 37%,
+              var(--main-card-border) 63%
           );
           background-size: 400% 100%;
           animation: skeleton-loading 1.4s ease infinite;
@@ -141,7 +131,7 @@ const props = defineProps({
           align-items: flex-start;
           .name {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 24px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -151,15 +141,15 @@ const props = defineProps({
             white-space: nowrap;
           }
           .desc {
-            font-size: 15px;
+            font-size: 20px;
             margin-top: 4px;
             line-height: 1.2;
             color: var(--main-font-second-color);
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            line-clamp: 2;
-            -webkit-line-clamp: 2;
+            line-clamp: 7;
+            -webkit-line-clamp: 7;
             -webkit-box-orient: vertical;
             transition:
               color 0.3s,
