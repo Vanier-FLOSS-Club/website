@@ -5,7 +5,7 @@
       </template>
     </Banner>
     <!-- Link Data -->
-    <LinkList :listData="linkData" :useFriendsLink="true" />
+    <EventList :listData="linkData" :useFriendsLink="true" />
   </div>
 </template>
 
