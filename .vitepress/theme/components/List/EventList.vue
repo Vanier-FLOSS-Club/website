@@ -21,7 +21,7 @@
               },
             ]"
             :key="index"
-            :href="type?.type !== 'loss' ? link.url : null"
+            :href="null"
             target="_blank"
           >
             <div class="data">
@@ -76,6 +76,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .link-list {
   .link-type-list {
+    color: var(--main-color);
     margin-top: 2rem;
     .title {
       margin-left: 6px;
@@ -196,8 +197,8 @@ const props = defineProps({
             }
           }
           .desc {
-            font-size: 1rem;
-            margin-top: 4px;
+            font-size: 1.2rem;
+            margin-top: 1rem;
             line-height: 1.2;
             color: var(--main-font-second-color);
             overflow: hidden;

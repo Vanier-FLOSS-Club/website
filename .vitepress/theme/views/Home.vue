@@ -2,14 +2,14 @@
 <template>
   <div class="home">
     <Banner v-if="showHeader" :height="store.bannerType" />
-    <!-- Event Card -->
-    <template v-if="eventCardVisible">
-      <div class="event-tip">Next Upcoming Event: </div>
-      <EventCard class="home-event" />
-    </template>
     <!-- Main Content -->
     <div class="home-content">
       <div class="posts-content">
+        <!-- Event Card -->
+        <template v-if="eventCardVisible">
+          <div class="event-tip">Upcoming Next: </div>
+          <EventCard class="home-event" />
+        </template>
         <!-- All Categories or Tags  -->
         <TypeBar :type="showTags ? 'tags' : 'categories'" />
         <!-- List of Posts -->
@@ -148,14 +148,14 @@ watch(
 <style lang="scss" scoped>
 .home {
   .event-tip {
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 1.75rem;
+    font-weight: bold;
     color: var(--main-color);
-    margin-bottom: 0.1rem;
+    margin-bottom: 1rem;
     margin-top: 1rem;
     margin-left: 0.5rem;
-    letter-spacing: 0.02em;
-    text-align: match-parent;
+    text-align: left;
+    font-family: var(--main-font-family);
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
