@@ -1,4 +1,4 @@
-<!-- 链接卡片 -->
+<!-- Link Card -->
 <template>
   <a :href="url" :target="isOutLink ? '_blank' : null" class="link-card s-card hover">
     <span v-if="isOutLink" class="link-tip">
