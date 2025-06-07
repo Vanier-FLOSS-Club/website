@@ -3,10 +3,38 @@ import Calendar from '@/components/Aside/Widgets/Calendar.vue'
 import eventData from '@/assets/eventData.mjs'
 
 const event = eventData[0]?.typeList?.[0] || {}
+const url = '/pages/upcoming'
 </script>
 
 <template>
-  <div class="event-card link-card s-card">
+  <a
+    v-if="url"
+    class="event-card link-card s-card"
+    :href="url"
+    target="_self"
+    rel="noopener"
+  >
+    <div class="data">
+      <div class="event-header-row">
+        <span class="name">{{ event.name }}</span>
+        <div v-if="event.location" class="event-location-inline">
+          <i class="font-awesome fa-solid fa-map-location"></i>
+          <span class="event-location-text">{{ event.location }}</span>
+        </div>
+      </div>
+      <span class="desc">{{ event.desc }}</span>
+    </div>
+    <div class="location-calendar-gap"></div>
+    <div class="calendar-outer">
+      <div class="calendar">
+        <Calendar :date="event.time" />
+      </div>
+    </div>
+  </a>
+  <div
+    v-else
+    class="event-card link-card s-card"
+  >
     <div class="data">
       <div class="event-header-row">
         <span class="name">{{ event.name }}</span>
@@ -79,8 +107,8 @@ const event = eventData[0]?.typeList?.[0] || {}
       }
     }
     .desc {
-      font-size: 1rem;
-      margin-top: 4px;
+      font-size: 1.2rem;
+      margin-top: 1rem;
       line-height: 1.2;
       color: var(--main-font-second-color);
       overflow: hidden;
@@ -92,6 +120,9 @@ const event = eventData[0]?.typeList?.[0] || {}
       transition:
         color 0.3s,
         opacity 0.3s;
+      @media (max-width: 576px) {
+        font-size: 1rem;
+      }
     }
   }
   .location-calendar-gap {
