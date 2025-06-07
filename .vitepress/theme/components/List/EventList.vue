@@ -5,7 +5,7 @@
         <div class="title">
           <h2 class="name">
             <span class="name-text">{{ type?.typeName || i18n('components.list.link-list.unknown-grouping') }}</span>
-            <span v-if="showCount" class="name-count">（{{ type?.typeList?.length || 0 }}）</span>
+            <span v-if="showCount" class="name-count">({{ type?.typeList?.length || 0 }})</span>
           </h2>
           <span v-if="type?.typeDesc" class="tip">{{ type?.typeDesc }}</span>
         </div>

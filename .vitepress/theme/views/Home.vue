@@ -2,6 +2,12 @@
 <template>
   <div class="home">
     <Banner v-if="showHeader" :height="store.bannerType" />
+    <!-- Event Card -->
+    <template v-if="eventCardVisible">
+      <div class="event-tip">Next Upcoming Event: </div>
+      <EventCard class="home-event" />
+    </template>
+    <!-- Main Content -->
     <div class="home-content">
       <div class="posts-content">
         <!-- All Categories or Tags  -->
@@ -31,6 +37,8 @@
 
 <script setup>
 import { mainStore } from "@/store";
+import EventCard from "../components/Tags/EventCard.vue";
+import eventData from "../assets/eventData.mjs";
 
 const { theme } = useData();
 const store = mainStore();
@@ -50,6 +58,10 @@ const props = defineProps({
   showTags: {
     type: [null, String],
     default: null,
+  },
+  eventCardVisible: {
+    type: Boolean,
+    default: false,
   },
 });
 
@@ -82,7 +94,7 @@ const getCurrentPage = () => {
 // Compute Data Related to Posts
 const postData = computed(() => {
   const page = getCurrentPage();
-  console.log("当前页数：", page);
+  console.log("Current Page：", page);
   let data = null;
   // Category Data
   if (props.showCategories) {
@@ -98,6 +110,16 @@ const postData = computed(() => {
   }
   // Return All Data
   return data ? data.slice(page * postSize, page * postSize + postSize) : [];
+});
+
+// Determine if there exist events
+const eventCardVisible = computed(() => {
+  return (
+    Array.isArray(eventData) &&
+    eventData.length > 0 &&
+    Array.isArray(eventData[0].typeList) &&
+    eventData[0].typeList.length > 0
+  );
 });
 
 // Restore Y Scroll Position
@@ -125,6 +147,23 @@ watch(
 
 <style lang="scss" scoped>
 .home {
+  .event-tip {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-bottom: 0.1rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    letter-spacing: 0.02em;
+    text-align: match-parent;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+  }
+  .home-event {
+    margin-bottom: 2rem;
+  }
   .home-content {
     width: 100%;
     display: flex;
