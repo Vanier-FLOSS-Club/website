@@ -135,6 +135,7 @@ export const themeConfig = {
         text: "Contents",
         items: [
           { text: "Events", link: "/pages/categories/Events" },
+          { text: "Upcoming", link: "/pages/upcoming" },
         ],
       },
       {

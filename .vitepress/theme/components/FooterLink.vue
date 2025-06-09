@@ -1,4 +1,4 @@
-<!-- 页脚 - 链接 -->
+<!-- Footer Link -->
 <template>
   <div class="footer-link">
     <div v-if="showBar" class="footer-bar">
