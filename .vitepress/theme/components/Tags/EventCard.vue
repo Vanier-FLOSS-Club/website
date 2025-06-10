@@ -74,6 +74,7 @@ const url = '/pages/upcoming'
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      gap: 2rem;
       @media (max-width: 576px) {
         flex-direction: column;
         align-items: flex-start;
@@ -83,10 +84,7 @@ const url = '/pages/upcoming'
       .name {
         font-weight: bold;
         font-size: 1.5rem;
-        overflow: hidden;
         display: -webkit-box;
-        line-clamp: 1;
-        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         white-space: normal;
       }
