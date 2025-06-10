@@ -3,10 +3,9 @@
     <h1 class="title">About Us</h1>
     <div class="about-content" style="grid-template-columns: 0fr 3fr 0fr">
       <div/>
-      <!-- 介绍 -->
+      <!-- About -->
       <div class="about-item hello">
-        <span class="text1">👋</span>
-        <span class="text2 title2">Welcome!</span>
+        <span class="text2 title2">Welcome!👋</span>
         <span class="text3">
           We are the Vanier community gets together to celebrate and contribute to Free and Open Source Software projects.
         </span>
@@ -19,7 +18,7 @@
 <script setup>
 const { theme } = useData();
 
-// 技能数据
+// SkillData
 const skillsData = [
   {
     name: "JavaScript",

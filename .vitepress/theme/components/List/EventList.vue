@@ -163,6 +163,7 @@ const props = defineProps({
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 2rem;
             width: 100%;
             @media (max-width: 576px) {
               flex-direction: column;
@@ -173,10 +174,7 @@ const props = defineProps({
             .name {
               font-weight: bold;
               font-size: 1.5rem;
-              overflow: hidden;
               display: -webkit-box;
-              line-clamp: 1;
-              -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
               white-space: normal;
             }
