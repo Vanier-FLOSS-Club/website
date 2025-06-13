@@ -1,3 +1,7 @@
 [submodule "posts"]
 	path = posts
 	url = https://github.com/Vanier-FLOSS-Club/contents.git
+[submodule ".vitepress/theme/assets/auto-event-data"]
+	branch = data
+	path = .vitepress/theme/assets/auto-event-data
+	url = https://github.com/Vanier-FLOSS-Club/auto-events.git
