@@ -1,4 +1,4 @@
-// Upcoming events data
+// Friendly Links & Recommended Sites
 const linkData = [
   {
     type: "link",
