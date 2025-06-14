@@ -1,6 +1,6 @@
 <script setup>
 import Calendar from '@/components/Aside/Widgets/Calendar.vue'
-import eventData from '@/assets/eventData.mjs'
+import eventData from '@/assets/auto-event-data/output/eventData.mjs'
 
 const event = eventData[0]?.typeList?.[0] || {}
 const url = '/pages/upcoming'
