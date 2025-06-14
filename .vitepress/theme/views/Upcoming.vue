@@ -11,7 +11,7 @@
 
 <script setup>
 import { smoothScrolling } from "@/utils/helper";
-import linkData from "@/assets/auto-events-data/output/eventData.mjs";
+import linkData from "@/assets/auto-event-data/output/eventData.mjs";
 import { useI18n } from '@/utils/i18n'
 
 const { i18n } = useI18n()
