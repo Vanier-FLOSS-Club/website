@@ -38,7 +38,7 @@
 <script setup>
 import { mainStore } from "@/store";
 import EventCard from "../components/Tags/EventCard.vue";
-import eventData from "../assets/eventData.mjs";
+import eventData from "../assets/auto-event-data/output/eventData.mjs";
 
 const { theme } = useData();
 const store = mainStore();

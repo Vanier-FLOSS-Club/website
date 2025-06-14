@@ -1,0 +1,26 @@
+name: 'Sync Events Data'
+
+on:
+  # When the Event Data submodule is updated
+  repository_dispatch:
+    types: [submodule-updated]
+  # Manually Trigger & HTTP API Call Trigger
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: 'Submodules Sync'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Git Submodule Update
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --remote .vitepress/theme/assets/auto-event-data
+      - name: Commit Update
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "deploy: Sync Events Data" && git push || echo "No Changes to Commit"
