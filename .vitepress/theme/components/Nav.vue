@@ -561,7 +561,7 @@ const { site, theme, frontmatter, page } = useData();
         cursor: pointer;
 
         &::after {
-          content: "返回顶部";
+          content: "Back To Top";
           position: absolute;
           top: 0;
           left: 0;
