@@ -218,7 +218,7 @@ export const themeConfig = {
   },
   // Sponsoring | 打赏, TODO
   rewardData: {
-    enable: true,
+    enable: false,
     // GitHub Sponsors | GitHub 赞助
     github: "",
     // Buy Me a Coffee
