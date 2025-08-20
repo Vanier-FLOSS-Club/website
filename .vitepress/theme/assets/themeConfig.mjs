@@ -121,12 +121,20 @@ export const themeConfig = {
         link: "https://www.github.com/Vanier-FLOSS-Club",
       },
       {
+        icon: "fa-brands fa-instagram",
+        link: "https://www.instagram.com/vanier_floss?igsh=MW0wZTZ2NWt6Ynk4eg==",
+      },
+      {
         icon: "fa-brands fa-linkedin",
-        link: "https://www.linkedin.com/company/vanier-floss-club/",
+        link: "https://www.linkedin.com/company/vanier-floss-club",
       },
       {
         icon: "fa-brands fa-discord",
         link: "https://discord.gg/rBKb9JRQGD",
+      },
+      {
+        icon: "fa-solid fa-calendar-day",
+        link: "https://www.vanierfloss.club/pages/categories/Events",
       },
     ],
     // Sitemap | 网站地图
